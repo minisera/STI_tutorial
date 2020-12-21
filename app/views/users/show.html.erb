@@ -1,0 +1,7 @@
+  <% @post_list.each do |post| %>
+    <% if post.try(:id).nil? %>
+      <!-- 新規登録フォーム -->
+    <% else %>
+      <!-- 登録済み情報の表示 -->
+    <% end %>
+  <% end %>
