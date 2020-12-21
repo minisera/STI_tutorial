@@ -1,0 +1,3 @@
+class Clothes < Post
+
+end
