@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-resources :posts
-resources :users
+  devise_for :users
+  resources :posts
 end
