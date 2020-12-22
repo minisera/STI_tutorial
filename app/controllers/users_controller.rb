@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     ]
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find(current_user.id)
     set_post_by_genre
   end
 
