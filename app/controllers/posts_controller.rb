@@ -7,16 +7,11 @@ class PostsController < ApplicationController
     # サブクラスごとのオブジェクトを初期化
     @post = self.class.const_get(const_name)
     @post.new(post_params)
-    respond_to do |format|
-      if @post.save!
-        ~
-      end
-    end
+    @post.save
   end
 
   private
-    # strong_parameters
     def post_params
-      params.require(@post_name).permit(:user_id, :name, :email, :password)
+      params.require(@post_name).permit(:user_id,:body)
     end
 end
