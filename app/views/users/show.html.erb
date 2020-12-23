@@ -1,12 +1,11 @@
-  <% @post_list.each do |post| %>
-    <% if post.try(:id).nil? %>
-      <!-- 新規登録フォーム -->
-      <%= form_with posts_path,method: :post do |f|%>
-        <%= f.text_field :body %>
-        <%= f.submit "投稿"%>
-      <% end %>
-    <% else %>
-      <!-- 登録済み情報の表示 -->
-    
-    <% end %>
-  <% end %>
+<%= @user.email%>
+
+<%= form_with model: @post,method: :post do |f| %>
+  <%= f.text_field :body %>
+  <%= f.submit "投稿" %>
+<% end %>
+
+
+<% @posts.each do |post| %>
+  <%= post.body%>
+<% end %>
