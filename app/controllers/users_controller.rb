@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(current_user.id)
-    @posts = Book.all
+    @posts = Post.all
     @post = Book.new
     # set_post_by_genre
   end

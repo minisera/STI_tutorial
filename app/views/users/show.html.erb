@@ -1,4 +1,4 @@
-<%= @user.email%>
+<%= @user.name%>
 
 <%= form_with model: @post,method: :post do |f| %>
   <%= f.text_field :body %>
@@ -8,4 +8,5 @@
 
 <% @posts.each do |post| %>
   <%= post.body%>
+  <%= post%>
 <% end %>
