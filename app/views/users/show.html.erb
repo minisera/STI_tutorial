@@ -1,10 +1,5 @@
 <%= @user.name%>
 
-<%= form_with model: @post,method: :post do |f| %>
-  <%= f.text_field :body %>
-  <%= f.submit "投稿" %>
-<% end %>
-
 
 <% @posts.each do |post| %>
   <%= post.body %>
