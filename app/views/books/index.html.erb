@@ -1,5 +1,4 @@
-<%= @user.name%>
-
+記事を作ってください
 <%= form_with model: @post,method: :post do |f| %>
   <%= f.text_field :body %>
   <%= f.submit "投稿" %>
@@ -10,4 +9,3 @@
   <%= post.body %>
   <%= post.class %><br>
 <% end %>
-

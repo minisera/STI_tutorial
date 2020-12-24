@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   GENRE = [
     'clothes',
-    'book'
+    'books'
     ]
 
   def show

@@ -1,3 +1,2 @@
 class Book < Post
-
 end
