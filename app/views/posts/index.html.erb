@@ -1,9 +1,17 @@
 <div>全投稿一覧</div>
 
-<% @postss.each do |post| %>
+<div>本一覧</div>
+<% @post_book.each do |post| %>
   <%= post.body %>
   <%= post.class %><br>
 <% end %>
+
+<div>服一覧</div>
+<% @post_clothes.each do |post| %>
+  <%= post.body %>
+  <%= post.class %><br>
+<% end %>
+
 
 <%= link_to "服一覧",clothes_path %>
 <%= link_to "本一覧",books_path %>

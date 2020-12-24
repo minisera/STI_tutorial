@@ -1,7 +1,14 @@
 <%= @user.name%>
 
 
-<% @posts.each do |post| %>
+<div>本一覧</div>
+<% @post_book.each do |post| %>
+  <%= post.body %>
+  <%= post.class %><br>
+<% end %>
+
+<div>服一覧</div>
+<% @post_clothes.each do |post| %>
   <%= post.body %>
   <%= post.class %><br>
 <% end %>

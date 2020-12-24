@@ -19,7 +19,9 @@ class PostsController < ApplicationController
       @post = post.new
       @posts = Post.where(type: const_name)
     else
-      @postss = Post.all
+      posts = Post.all
+      @post_book = posts.select{|x| x[:type].include?("Book")} 
+      @post_clothes = posts.select{|x| x[:type].include?("Clothe")} 
     end
   end
 

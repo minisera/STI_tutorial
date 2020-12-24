@@ -2,7 +2,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(current_user.id)
-    @posts = @user.posts
+    @post_book = @user.posts.select{|x| x[:type].include?("Book")}
+    @post_clothes = @user.posts.select{|x| x[:type].include?("Clothe")}
     # set_post_by_genre
   end
 
