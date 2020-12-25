@@ -25,6 +25,11 @@ class PostsController < ApplicationController
     end
   end
 
+  def show
+    binding.pry
+    @post = Post.find(params[:id])
+  end
+
   private
 
     def post_params
