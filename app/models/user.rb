@@ -6,4 +6,5 @@ class User < ApplicationRecord
   has_many :posts
   has_many :books
   has_many :clothes
+  has_many :likes
 end
