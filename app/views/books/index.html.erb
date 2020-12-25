@@ -8,6 +8,7 @@
 <% @posts.each do |post| %>
   <%= post.body %>
   <%= post.class %><br>
+  <%= post.likes.count %><br>
 <% end %>
 
 <%= link_to "トップへ戻る",posts_path %>
