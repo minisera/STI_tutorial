@@ -26,8 +26,10 @@ class PostsController < ApplicationController
   end
 
   def show
-    binding.pry
+    # binding.pry
     @post = Post.find(params[:id])
+    @comment = Comment.new
+    @comments = @post.comments
   end
 
   private

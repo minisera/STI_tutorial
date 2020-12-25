@@ -1,9 +1,12 @@
 class CommentsController < ApplicationController
   def create
+    # binding.pry
     @comment = Comment.new(comment_params)
     if @comment.save
       redirect_to posts_path
-    end   
+    else
+      render "posts/show"
+    end
   end
 
   def destroy
@@ -15,6 +18,6 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    pramas.require(:comment).permit(:body).merge(user_id: current_user.id,post_id: params[:post_id])
+    params.permit(:body).merge(user_id: current_user.id,post_id: params[:post_id])
   end
 end

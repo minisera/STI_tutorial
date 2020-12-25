@@ -2,7 +2,7 @@
 
 <div>本一覧</div>
 <% @post_book.each do |post| %>
-  <%= link_to book_path(post.id) do %>
+  <%= link_to post_path(post.id) do %>
     <%= post.body %>
   <% end %>
   <%= post.class %><br>
@@ -19,7 +19,7 @@
 
 <div>服一覧</div>
 <% @post_clothes.each do |post| %>
-  <%= link_to book_path(post.id) do %>
+  <%= link_to post_path(post.id) do %>
     <%= post.body %>
   <% end %>
   <%= post.class %><br>

@@ -1,0 +1,10 @@
+<%= @post.body%>
+
+<%= form_with url: post_comments_path(@post.id),method: :post,local: true do |f| %>
+  <%= f.text_field :body %>
+  <%= f.submit "コメントする" %>
+<% end %>
+
+<% @comments.each do |comment| %>
+  <%= comment.body %>
+<% end %>

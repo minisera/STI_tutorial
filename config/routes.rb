@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     resource :comments, only: [:create,:destroy]
   end
   resources :users
-  resources :books
-  resources :clothes
+  resources :books do
+    resource :comments, only: [:create,:destroy]
+  end
+    resources :clothes
 end
